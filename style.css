@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.register-container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 2px solid #00cfff;
+
+    box-shadow:
+        0 0 15px #00bfff,
+        0 0 30px rgba(0, 191, 255, 0.5);
+
+    border-radius: 15px;
+}
+
+.register-container {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.register-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1877c9;
+}
+
+.register-container p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background-color: #1877c9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #07569b;
+}
+
+a {
+    color: #1877c9;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #020b1d;
+    position: relative;
+    isolation: isolate;
+    overflow-x: hidden;
+}
+
+/* Moving neon glow */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -50%;
+
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 20% 30%,
+            rgba(0, 191, 255, 0.8), transparent 25%),
+
+        radial-gradient(circle at 80% 70%,
+            rgba(0, 100, 255, 0.8), transparent 25%),
+
+        radial-gradient(circle at 50% 50%,
+            rgba(0, 255, 255, 0.45), transparent 35%);
+
+    filter: blur(55px);
+
+    animation: neonMove 10s ease-in-out infinite alternate;
+}
+
+/* Neon light lines */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    z-index: -1;
+    pointer-events: none;
+
+    background: repeating-linear-gradient(
+        120deg,
+        transparent 0px,
+        transparent 100px,
+        rgba(0, 200, 255, 0.12) 102px,
+        transparent 105px
+    );
+
+    animation: lightMove 8s linear infinite;
+}
+
+/* Glow movement */
+@keyframes neonMove {
+    0% {
+        transform: translate(-8%, -5%) scale(1);
+    }
+
+    50% {
+        transform: translate(5%, 8%) scale(1.15);
+    }
+
+    100% {
+        transform: translate(10%, -5%) scale(1);
+    }
+}
+
+/* Moving neon lines */
+@keyframes lightMove {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 300px 300px;
+    }
+}
+
+/* Accessibility: reduce motion when requested */
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after {
+        animation: none;
+    }
+}
+/* LOGIN PAGE */
+
+.login-container {
+    width: 400px;
+    max-width: calc(100% - 40px);
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 2px solid #00cfff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 15px #00bfff,
+        0 0 30px rgba(0, 191, 255, 0.5);
+
+    position: relative;
+    z-index: 1;
+}
+
+.login-container h1 {
+    color: #087cbd;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.login-container button {
+    margin-top: 10px;
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.6);
+}
+
+.login-container button:hover {
+    background-color: #003f75;
+    box-shadow: 0 0 20px #00bfff;
+}
